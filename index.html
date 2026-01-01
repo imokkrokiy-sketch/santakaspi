@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>SantaPay — Тайный Санта</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ❄️ СНЕГ -->
+<div class="snow"></div>
+
+<!-- 🔔 ЗВУК -->
+<audio id="successSound" src="success.mp3" preload="auto"></audio>
+
+<div class="app" id="app">
+
+  <!-- 🔴 HEADER -->
+  <div class="header">
+    <div class="brand animate-logo">
+      <div class="logo-wrapper">
+        <img src="logo.png" alt="SantaPay">
+        <div class="santa-hat"></div>
+      </div>
+      <span>SantaPay</span>
+    </div>
+
+    <div class="balance">
+      Баланс: <strong>12 500 ₸</strong>
+    </div>
+  </div>
+
+  <!-- ЭКРАН 1 -->
+  <div class="card screen active" id="step1">
+    <h1>🎁 Тайный Санта</h1>
+
+    <input type="tel" placeholder="Введите номер телефона">
+    <input type="number" placeholder="Сумма для пополнения ₸">
+
+    <button onclick="startLoading()">Продолжить</button>
+
+    <p class="disclaimer">
+      Развлекательная новогодняя пародия 🎄<br>
+      Данные не сохраняются
+    </p>
+  </div>
+
+  <!-- ЗАГРУЗКА -->
+  <div class="loader screen hidden" id="loader">
+    <div class="spinner"></div>
+    <p>Проверяем подарок...</p>
+  </div>
+
+  <!-- ЭКРАН 2 -->
+  <div class="card screen hidden" id="step2">
+    <h1>🎅 Хо-хо-хо!</h1>
+    <p class="success-text">Тайный Санта уже в пути!</p>
+    <div class="santa-emoji">🎅🎁</div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
