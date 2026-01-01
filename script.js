@@ -28,5 +28,5 @@ function startLoading() {
     loader.classList.add("hidden");
     step2.classList.remove("hidden");
     sound.play();
-  }, 2200);
+  }, 7000);
 }
