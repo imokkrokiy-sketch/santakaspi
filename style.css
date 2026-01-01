@@ -1,0 +1,184 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #f3f4f6;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+.app {
+  width: 100%;
+  max-width: 390px;
+  margin: auto;
+  position: relative;
+}
+
+/* 🔴 HEADER */
+.header {
+  background: #e53935;
+  padding: 15px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  color: white;
+}
+
+/* BRAND */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand span {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* ✨ LOGO ANIMATION */
+.animate-logo {
+  animation: fadeSlide 1s ease-out;
+}
+
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🎅 LOGO */
+.logo-wrapper {
+  position: relative;
+  width: 44px;
+  height: 44px;
+}
+
+.logo-wrapper img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+/* 🎅 HAT */
+.santa-hat {
+  position: absolute;
+  top: -12px;
+  left: -4px;
+  width: 50px;
+  height: 22px;
+  background: #c62828;
+  border-radius: 12px;
+}
+
+.santa-hat::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: 12px;
+  width: 28px;
+  height: 20px;
+  background: #c62828;
+  border-radius: 50%;
+  transform: rotate(-20deg);
+}
+
+.santa-hat::after {
+  content: "";
+  position: absolute;
+  top: -18px;
+  right: -4px;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+}
+
+/* 💰 */
+.balance {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* 📱 SCREENS */
+.screen {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.screen.hidden {
+  display: none;
+}
+
+.card {
+  background: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+input, button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: #e53935;
+  color: white;
+  border: none;
+  font-size: 16px;
+}
+
+/* ⏳ */
+.loader {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #eee;
+  border-top: 6px solid #e53935;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+/* 🎁 */
+.santa-emoji {
+  font-size: 48px;
+  margin-top: 15px;
+}
+
+/* ❄️ SNOW */
+.snow::before, .snow::after {
+  content: "";
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  background-image:
+    radial-gradient(2px 2px at 20% 30%, white 100%, transparent),
+    radial-gradient(2px 2px at 80% 40%, white 100%, transparent),
+    radial-gradient(1.5px 1.5px at 50% 60%, white 100%, transparent);
+  animation: snow 10s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes snow {
+  to { transform: translateY(50%); }
+}
+
+.disclaimer {
+  font-size: 12px;
+  color: gray;
+  margin-top: 15px;
+    }
